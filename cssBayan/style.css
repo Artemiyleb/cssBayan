@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+html {
+	font-size: 10px;
+	line-height: 1;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	background-color: #f6f6ec;
+}
+
+h1 {
+	font-size: 4rem;
+	font-weight: 900;
+	margin-bottom: 1rem;
+}
+
+.header {
+	margin: 1rem 0;
+}
+
+.container {
+	max-width: 340px;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.bayan label {
+	height: 6rem;
+	font-size: 2rem;
+	color: #0059d9;
+	margin: 1rem 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+	position: relative;
+	z-index: 99;
+}
+
+.bayan-open label {
+	color: black;
+}
+
+.icon img {
+	width: 6rem;
+	height: 6rem;
+	transition: all 0.3s;
+}
+
+.bayan-wrap:hover > .bayan label {
+	color: black;
+}
+
+.bayan-wrap:hover > .bayan label > .icon {
+  display: block;
+}
+
+.content-memes{
+	height: 0;
+	overflow: hidden;
+}
+
+.open-content {
+	height: 100%;
+}
+
+.mask {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.content-memes img {
+	transform: scale(0.9);
+}
+
+.bayan:hover > .content-memes {
+	height: 100%;
+	cursor: pointer;
+}
+
+.bayan:hover > .content-memes img{
+	transform: scale(1.1);
+	transition: all 0.5s ease-in-out;
+}
+
+.bayan:hover label > .icon {
+	transform: rotate(45deg);
+}
+
+.content-memes a {
+  display: inline-block;
+	width: 100%;
+}
+
+.mask {
+	background: #f6f6ec;;  /* У блока, оборачивающего картинку при наведении будет просвечивать черный фон */
+	overflow: hidden;  /* Ограничиваем видиую область */
+}
+
+.mask img{
+	opacity: 1;
+	transition: opacity 0.1s linear;  /* Плавное изменение прозрачности и увеличения */
+	display: block; /* Убираем полосу под картинкий */
+}
+
+.content-memes a:active .mask img{
+	opacity: 0.6; /* Высветляем картинку, но она становится темнее, так как под ней черный фон */
+}
+
+@media (min-width: 321px) {
+	h1 {
+		font-size: 6rem;
+		margin-bottom: 2rem;
+	}
+	.header {
+		margin: 2rem 0;
+	}
+	.container {
+		max-width: 440px;
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+	.bayan label {
+		height: 8rem;
+		font-size: 2.4rem;
+		font-weight: 700;
+	}
+	.icon img {
+		width: 7rem;
+		height: 7rem;
+		}
+}
+
+@media (min-width: 821px) {
+	.header {
+		margin: 3rem 0;
+	}
+	.container {
+		max-width: 640px;
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+	.bayan label {
+		height: 10rem;
+		font-size: 3rem;
+	}
+	.icon img {
+		width: 8rem;
+		height: 8rem;
+		}
+}
